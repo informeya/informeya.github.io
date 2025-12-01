@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="https://drive.google.com/uc?export=view&id=1_9HEu-04rBVSzV8rwN6NZ7fOdvhhaC4L">
+    <title>Psi. Liliana Stampella</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Barra superior */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 0 40px;
+            height: 120px; /* tamaño duplicado */
+            box-sizing: border-box;
+            border-bottom: 1px solid #ccc;
+        }
+
+        /* Logo */
+        .logo img {
+            height: 100%;
+            max-height: 100px;
+        }
+
+        /* Botones */
+        .nav-buttons button {
+            margin-left: 20px;
+            padding: 20px 40px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #62B6F7;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #FFE766;
+            color: #000;
+        }
+
+        /* Iframe principal */
+        #iframePrincipal {
+            width: 100%;
+            height: calc(100% - 120px); /* resto de la pantalla menos barra */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="nav-buttons">
+            <button onclick="cambiarIframe('https://script.google.com/macros/s/AKfycbwWktAs72Rjbf8t1fjwsgNXye0QvatnIztcL2lDA0-MIA9pgzdLV9QYFJEUQBFCqwdrTw/exec?page=lili_solicitud.html')">SOLICITUD INFORME</button>
+            <button onclick="cambiarIframe('https://script.google.com/macros/s/AKfycbwWktAs72Rjbf8t1fjwsgNXye0QvatnIztcL2lDA0-MIA9pgzdLV9QYFJEUQBFCqwdrTw/exec?page=lili_informeplano.html')">SOY PROFESIONAL</button>
+        </div>
+    </div>
+
+    <iframe id="iframePrincipal" src="https://script.google.com/macros/s/AKfycbwWktAs72Rjbf8t1fjwsgNXye0QvatnIztcL2lDA0-MIA9pgzdLV9QYFJEUQBFCqwdrTw/exec?page=lili_solicitud.html"></iframe>
+
+    <script>
+        function cambiarIframe(url) {
+            document.getElementById('iframePrincipal').src = url;
+        }
+    </script>
+
+</body>
+</html>
