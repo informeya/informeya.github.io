@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <!-- ✅ META CLAVE PARA ANDROID -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
     <link rel="icon" href="https://script.google.com/macros/s/AKfycbysOLYQp44HRks4mxg09R7CHbtNO08jLCW5db-NoS_xe1UiRv16XfsNmUJD20PusDUg8w/exec?page=lili_solicitud.html">
     <title>Psi. Liliana Stampella</title>
+
     <style>
         html, body {
             margin: 0;
@@ -20,15 +25,9 @@
             align-items: center;
             background-color: white;
             padding: 0 40px;
-            height: 120px; /* tamaño duplicado */
+            height: 120px;
             box-sizing: border-box;
             border-bottom: 1px solid #ccc;
-        }
-
-        /* Logo */
-        .logo img {
-            height: 100%;
-            max-height: 100px;
         }
 
         /* Botones */
@@ -50,24 +49,34 @@
             color: #000;
         }
 
-        /* Iframe principal */
+        /* ✅ Iframe blindado para móviles */
         #iframePrincipal {
-            width: 100%;
-            height: calc(100% - 120px); /* resto de la pantalla menos barra */
-            border: none;
+          width: 100%;
+          height: calc(100% - 120px);
+          border: none;
+          position: relative;
+          z-index: 10;
+          touch-action: manipulation;
         }
     </style>
 </head>
+
 <body>
 
     <div class="top-bar">
         <div class="nav-buttons">
             <button onclick="cambiarIframe('https://script.google.com/macros/s/AKfycbysOLYQp44HRks4mxg09R7CHbtNO08jLCW5db-NoS_xe1UiRv16XfsNmUJD20PusDUg8w/exec?page=lili_solicitud.html')">SOLICITUD INFORME</button>
+
             <button onclick="cambiarIframe('https://script.google.com/macros/s/AKfycbysOLYQp44HRks4mxg09R7CHbtNO08jLCW5db-NoS_xe1UiRv16XfsNmUJD20PusDUg8w/exec?page=lili_informeplano.html')">SOY PROFESIONAL</button>
         </div>
     </div>
 
-    <iframe id="iframePrincipal" src="https://script.google.com/macros/s/AKfycbwWktAs72Rjbf8t1fjwsgNXye0QvatnIztcL2lDA0-MIA9pgzdLV9QYFJEUQBFCqwdrTw/exec?page=lili_solicitud.html"></iframe>
+    <!-- ✅ allow agregado -->
+    <iframe 
+      id="iframePrincipal"
+      src="https://script.google.com/macros/s/AKfycbwWktAs72Rjbf8t1fjwsgNXye0QvatnIztcL2lDA0-MIA9pgzdLV9QYFJEUQBFCqwdrTw/exec?page=lili_solicitud.html"
+      allow="fullscreen"
+    ></iframe>
 
     <script>
         function cambiarIframe(url) {
@@ -76,5 +85,4 @@
     </script>
 
 </body>
-
 </html>
