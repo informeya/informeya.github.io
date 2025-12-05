@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Lili Informe</title>
+  <title>Lili | Panel Principal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
@@ -42,7 +42,7 @@
             font-size: 120px;
             font-weight: 800;
             display: inline-block;
-            margin-bottom: 35px;
+            margin-bottom: 20px;
             line-height: 1.1;
             color: var(--color-primary);
         }
@@ -51,34 +51,46 @@
             color: var(--color-primary);
             font-weight: 800;
             font-size: 70px;
-            margin-bottom: 65px;
+            margin-bottom: 40px;
         }
 
-        button {
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .menu-btn {
             background-color: var(--color-primary);
             color: white;
-            padding: 25px 45px;
+            padding: 45px 30px;
             border: none;
-            border-radius: var(--border-radius-sm);
+            border-radius: var(--border-radius-lg);
             cursor: pointer;
-            font-size: 28px;
-            font-weight: 600;
+            font-size: 32px;
+            font-weight: 800;
             transition: all 0.2s ease;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+            height: 200px;
         }
 
-        button:hover {
+        .menu-btn:hover {
             background-color: var(--color-secondary); 
             color: var(--color-text-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 28px rgba(138, 43, 226, 0.35);
+            transform: translateY(-4px);
+            box-shadow: 0 18px 45px rgba(138, 43, 226, 0.35);
+        }
+
+        .menu-btn.accent {
+            background-color: var(--color-accent);
         }
 
         @media (max-width: 480px) {
             body { font-size: 22px; }
             .logo-text { font-size: 90px; }
-            h1 { font-size: 56px; }
-            button { width: 100%; }
+            h1 { font-size: 52px; }
+            .menu-btn { height: 160px; font-size: 26px; }
         }
   </style>
 </head>
@@ -86,14 +98,26 @@
 
   <div id="container">
     <div class="logo-text">LILI</div>
-    <h1>Ingreso al Informe</h1>
+    <h1>Panel Principal</h1>
 
-    <button onclick="irALaApp()">Entrar a la Aplicación</button>
+    <div class="menu-grid">
+      <button class="menu-btn" onclick="irInformes()">INFORMES</button>
+      <button class="menu-btn accent" onclick="irMedicacion()">MEDICACIÓN</button>
+      <button class="menu-btn" onclick="irHistoria()">HISTORIA CLÍNICA</button>
+    </div>
   </div>
 
   <script>
-    function irALaApp() {
+    function irInformes() {
       window.location.href = "https://script.google.com/macros/s/AKfycbw8vBY5ItYsJdTpdasGh6oxN_cmlqAeT3gtzoV-LtFXY70E-64YBpMkSGWvNcRdgSsEFA/exec?page=lili_informeplano.html";
+    }
+
+    function irMedicacion() {
+      alert("Módulo MEDICACIÓN (próximamente)");
+    }
+
+    function irHistoria() {
+      alert("Módulo HISTORIA CLÍNICA (próximamente)");
     }
   </script>
 
