@@ -4,11 +4,98 @@
   <meta charset="utf-8">
   <title>Lili Informe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Redirección automática a Google Apps Script -->
-  <meta http-equiv="refresh" content="0;url=https://script.google.com/macros/s/AKfycbw8vBY5ItYsJdTpdasGh6oxN_cmlqAeT3gtzoV-LtFXY70E-64YBpMkSGWvNcRdgSsEFA/exec?page=lili_informeplano.html">
+  <style>
+        :root {
+            --color-primary: #8a2be2;
+            --color-secondary: #c3aed6;
+            --color-accent: #ff69b4;
+            --color-text-dark: #333;
+            --color-text-light: #666;
+            --color-bg-light: #f9f9ff;
+            --color-bg-white: white;
+            --border-radius-lg: 18px;
+            --border-radius-sm: 8px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-bg-light);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        #container {
+            max-width: 1300px;
+            margin: 70px auto;
+            padding: 60px;
+            background-color: var(--color-bg-white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+            box-sizing: border-box;
+        }
+
+        .logo-text {
+            font-size: 120px;
+            font-weight: 800;
+            display: inline-block;
+            margin-bottom: 35px;
+            line-height: 1.1;
+            color: var(--color-primary);
+        }
+
+        h1 {
+            color: var(--color-primary);
+            font-weight: 800;
+            font-size: 70px;
+            margin-bottom: 65px;
+        }
+
+        button {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 25px 45px;
+            border: none;
+            border-radius: var(--border-radius-sm);
+            cursor: pointer;
+            font-size: 28px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        }
+
+        button:hover {
+            background-color: var(--color-secondary); 
+            color: var(--color-text-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(138, 43, 226, 0.35);
+        }
+
+        @media (max-width: 480px) {
+            body { font-size: 22px; }
+            .logo-text { font-size: 90px; }
+            h1 { font-size: 56px; }
+            button { width: 100%; }
+        }
+  </style>
 </head>
 <body>
-  <p>Redirigiendo a la aplicación...</p>
+
+  <div id="container">
+    <div class="logo-text">LILI</div>
+    <h1>Ingreso al Informe</h1>
+
+    <button onclick="irALaApp()">Entrar a la Aplicación</button>
+  </div>
+
+  <script>
+    function irALaApp() {
+      window.location.href = "https://script.google.com/macros/s/AKfycbw8vBY5ItYsJdTpdasGh6oxN_cmlqAeT3gtzoV-LtFXY70E-64YBpMkSGWvNcRdgSsEFA/exec?page=lili_informeplano.html";
+    }
+  </script>
+
 </body>
 </html>
