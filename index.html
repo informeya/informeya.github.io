@@ -21,11 +21,36 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--color-bg-light);
+
+            /* Fondo general, compatible con GitHub */
+            background: url('https://lh3.googleusercontent.com/d/12zSkdgaDpeuxDWsEbqdlaS19KOJ5Mx7-=s1600') no-repeat center center fixed;
+            background-size: cover;
+
             margin: 0;
             padding: 0;
             text-align: center;
             font-size: 25px;
+        }
+
+        /* Botón arriba a la derecha */
+        #btn-profesional {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--color-text-dark);
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: var(--border-radius-sm);
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        #btn-profesional:hover {
+            background-color: var(--color-primary);
+            transform: translateY(-2px);
         }
 
         #container {
@@ -34,7 +59,7 @@
             padding: 60px;
             background-color: var(--color-bg-white);
             border-radius: var(--border-radius-lg);
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
             box-sizing: border-box;
         }
 
@@ -91,10 +116,20 @@
             .logo-text { font-size: 90px; }
             h1 { font-size: 52px; }
             .menu-btn { height: 160px; font-size: 26px; }
+
+            #btn-profesional {
+                font-size: 14px;
+                padding: 10px 14px;
+            }
         }
   </style>
 </head>
 <body>
+
+  <!-- Botón pequeño arriba a la derecha -->
+  <button id="btn-profesional" onclick="irProfesional()">
+    INGRESAR COMO PROFESIONAL
+  </button>
 
   <div id="container">
     <div class="logo-text">LILI</div>
@@ -103,7 +138,6 @@
     <div class="menu-grid">
       <button class="menu-btn" onclick="irInformes()">SOLICITAR INFORME</button>
       <button class="menu-btn accent" onclick="irMedicacion()">SOLICITAR MEDICACIÓN</button>
-
     </div>
   </div>
 
@@ -116,11 +150,11 @@
       alert("Módulo MEDICACIÓN (próximamente)");
     }
 
-
+    function irProfesional() {
+      window.location.href =
+        "https://script.google.com/macros/s/AKfycbw8vBY5ItYsJdTpdasGh6oxN_cmlqAeT3gtzoV-LtFXY70E-64YBpMkSGWvNcRdgSsEFA/exec?page=lili_informeplano.html";
+    }
   </script>
 
 </body>
 </html>
-
-
-
